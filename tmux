@@ -120,6 +120,9 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 # Continuum auto restore
 set -g @continuum-restore 'on'
 
+# Restore vim sessions
+set -g @resurrect-strategy-vim 'session'
+
 # Other examples:
 # set -g @plugin 'github_username/plugin_name'
 # set -g @plugin 'git@github.com/user/plugin'
