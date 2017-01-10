@@ -1,3 +1,7 @@
+# Start windows and panes at 1, not 0
+set -g base-index 1
+setw -g pane-base-index 1
+
 # https://github.com/seebi/tmux-colors-solarized/blob/master/tmuxcolors-256.conf
 set-option -g status-bg colour235 #base02
 set-option -g status-fg colour136 #yellow
@@ -110,6 +114,8 @@ set-option -g mouse on
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-sidebar'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
 
 # Other examples:
 # set -g @plugin 'github_username/plugin_name'
