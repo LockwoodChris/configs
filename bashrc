@@ -116,6 +116,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export ANDROID_HOME=~/Android/Sdk/
-export PATH=$PATH:~/Android/Sdk/tools/:~/Android/Sdk:~/Android/Sdk/platform-tools:~/.gem/ruby/2.1.0/bin
 export EDITOR='vim'

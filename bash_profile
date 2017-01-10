@@ -1,4 +1,4 @@
-PATH="~/Android/Sdk/tools:~/Android/Sdk/platform-tools:${PATH}"
-export PATH
-export ANDROID_HOME=~/Android/Sdk
 . ~/.bashrc
+. ~/.bash_personal
+export PATH=$PATH:~/Android/Sdk/tools/:~/Android/Sdk:~/Android/Sdk/platform-tools:$RUBY_HOME
+export ANDROID_HOME=~/Android/Sdk
