@@ -45,9 +45,6 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this lin
 
 
-imap jk <ESC>
-vmap jk <ESC>
-
 set nu
 set tabstop=4
 set expandtab
