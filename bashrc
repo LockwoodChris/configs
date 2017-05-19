@@ -57,7 +57,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="\n\[\033[1;31m\]\u@\h\[\033[1;34m\](\$(/usr/bin/tty | /bin/sed -e 's:/dev/::')):\n\[\033[32m\]\w \e[1;35m\n|---> \e[m" 
+
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -114,10 +115,6 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-fi
-
-if [ -f ~/.bash_profile ]; then
-    . ~/.bash_profile
 fi
 
 if [ -f ~/.bash_personal ]; then
