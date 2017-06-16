@@ -57,8 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\n\[\033[1;31m\]\u@\h\[\033[1;34m\](\$(/usr/bin/tty | /bin/sed -e 's:/dev/::')):\n\[\033[32m\]\w \e[1;35m\n|---> \e[m" 
-
+    PS1="\n\[\e[1;31m\]\u@\h\[\e[1;34m\](\$(/usr/bin/tty | /bin/sed -e 's:/dev/::')):\n\[\e[32m\][\w] \[\e[1;35m\]\n\[\e[1;35m\]|--->\[\e[0m\] " 
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
