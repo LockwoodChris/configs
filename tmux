@@ -122,6 +122,7 @@ set -g @continuum-restore 'on'
 
 # Restore vim sessions
 set -g @resurrect-strategy-vim 'session'
+set -g @resurrect-processes 'ssh psql mysql sqlite3 npm android-studio'
 
 # Other examples:
 # set -g @plugin 'github_username/plugin_name'

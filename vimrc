@@ -21,6 +21,7 @@ Plugin 'L9'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'tpope/vim-obsession'
+Plugin 'gioele/vim-autoswap'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -55,3 +56,5 @@ set nowrap
 set clipboard=unnamed
 nnoremap H :tabprevious<cr>
 nnoremap L :tabnext<cr>
+set title titlestring=
+let g:autoswap_detect_tmux = 1
