@@ -4,6 +4,13 @@ import subprocess
 def copy(src, dest):
     os.system('cp ' + src + ' ' + dest)
 
+def delete(f):
+    os.system('rm -rf ' + f)
+
+def overwrite(src, dest):
+    delete(dest)
+    copy(src, dest)
+
 def exists(path):
     return os.path.exists(os.path.expanduser(path))
 
@@ -12,13 +19,13 @@ def syscall(string):
     return os.system(string)
 
 print('Copying vimrc')
-copy('./vimrc', '~/.vimrc')
+overwrite('./vimrc', '~/.vimrc')
 print('Copying bashrc')
-copy('./bashrc', '~/.bashrc')
+overwrite('./bashrc', '~/.bashrc')
 print('Copying tmux')
-copy('./tmux', '~/.tmux.conf')
+overwrite('./tmux', '~/.tmux.conf')
 print('Copying bash_profile')
-copy('./bash_profile', '~/.bash_profile')
+overwrite('./bash_profile', '~/.bash_profile')
 print('Creating bash_personal if not exists')
 syscall('touch ~/.bash_personal')
 

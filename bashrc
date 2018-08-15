@@ -120,4 +120,8 @@ if [ -f ~/.bash_personal ]; then
     . ~/.bash_personal
 fi
 
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
+
 export EDITOR='vim'
