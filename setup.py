@@ -18,14 +18,16 @@ def exists(path):
 def syscall(string):
     return os.system(string)
 
-print('Copying vimrc')
+print('Overwriting vimrc')
 overwrite('./vimrc', '~/.vimrc')
-print('Copying bashrc')
+print('Overwriting bashrc')
 overwrite('./bashrc', '~/.bashrc')
-print('Copying tmux')
+print('Overwriting tmux')
 overwrite('./tmux', '~/.tmux.conf')
-print('Copying bash_profile')
+print('Overwriting bash_profile')
 overwrite('./bash_profile', '~/.bash_profile')
+print('Overwriting bash_personal')
+overwrite('./bash_personal', '~/.bash_personal')
 print('Creating bash_personal if not exists')
 syscall('touch ~/.bash_personal')
 
