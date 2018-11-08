@@ -20,8 +20,11 @@ Plugin 'L9'
 "Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-obsession'
 Plugin 'gioele/vim-autoswap'
+Plugin 'Valloric/YouCompleteMe'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
