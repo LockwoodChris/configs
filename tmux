@@ -125,6 +125,10 @@ set -g @continuum-restore 'on'
 set -g @resurrect-strategy-vim 'session'
 set -g @resurrect-processes 'ssh psql mysql sqlite3 npm android-studio'
 
+# SSH forward
+set -g update-environment -r
+setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
+
 # Other examples:
 # set -g @plugin 'github_username/plugin_name'
 # set -g @plugin 'git@github.com/user/plugin'
@@ -132,3 +136,6 @@ set -g @resurrect-processes 'ssh psql mysql sqlite3 npm android-studio'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
+
+# set shell
+set -g default-shell /bin/zsh
