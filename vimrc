@@ -10,29 +10,15 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9' 
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-obsession'
 Plugin 'gioele/vim-autoswap'
-Plugin 'Valloric/YouCompleteMe'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-"Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'artur-shaik/vim-javacomplete2'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,6 +36,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this lin
 
 
+syntax on
 set nu
 set tabstop=4
 set expandtab
@@ -61,3 +48,14 @@ nnoremap H :tabprevious<cr>
 nnoremap L :tabnext<cr>
 set title titlestring=
 let g:autoswap_detect_tmux = 1
+
+" javacomplete2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
