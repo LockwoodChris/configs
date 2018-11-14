@@ -59,6 +59,6 @@ print(syscall('sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussel
 print(syscall('chsh -s /bin/zsh/'))
 print('Moving zsh config files')
 overwrite('./zshrc', '~/.zshrc')
-overwrite('./oh-my-zsh-custom.sh', '~/.oh-my-zsh/custom/env_setup.sh')
+overwrite('./oh-my-zsh-custom.zsh', '~/.oh-my-zsh/custom/env_setup.zsh')
 
 print('Done')
